@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seguros", "Seguros\Seguros.csproj", "{AD6ABAC2-2167-42B9-95E1-398E34DBD229}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seguros.Tests", "Seguros.Tests\Seguros.Tests.csproj", "{C942E669-1E6F-4BC8-AF32-45AB59979BA3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD6ABAC2-2167-42B9-95E1-398E34DBD229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD6ABAC2-2167-42B9-95E1-398E34DBD229}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD6ABAC2-2167-42B9-95E1-398E34DBD229}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD6ABAC2-2167-42B9-95E1-398E34DBD229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C942E669-1E6F-4BC8-AF32-45AB59979BA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C942E669-1E6F-4BC8-AF32-45AB59979BA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C942E669-1E6F-4BC8-AF32-45AB59979BA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C942E669-1E6F-4BC8-AF32-45AB59979BA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17ACBA55-D452-402F-B4A9-06AF761F9E77}
+	EndGlobalSection
+EndGlobal
