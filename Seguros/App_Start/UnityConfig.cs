@@ -17,7 +17,9 @@ namespace Seguros
 
             // e.g. container.RegisterType<ITestService, TestService>();
 
+            container.RegisterType<ITipoRiesgoService, TipoRiesgoService>();
             container.RegisterType<ITipoCubrimientoService, TipoCubrimientoService>();
+            container.RegisterType<IPolizaService, PolizaService>();
 
             DependencyResolver.SetResolver(new UnityDependencyResolver(container));
         }

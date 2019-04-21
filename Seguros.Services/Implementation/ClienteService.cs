@@ -3,7 +3,6 @@ using Seguros.Entities.Entities;
 using Seguros.Repositories.Repositories;
 using Seguros.Services.Contract;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Seguros.Services.Implementation
 {
@@ -16,9 +15,9 @@ namespace Seguros.Services.Implementation
             _clienteRepository = new ClienteRepository(new ApplicationDbContext());
         }
 
-        public List<Cliente> GetAll()
+        public IEnumerable<Cliente> GetAll()
         {
-            return _clienteRepository.GetAll().ToList();
+            return _clienteRepository.GetAll();
         }
 
         public Cliente Find(int id)

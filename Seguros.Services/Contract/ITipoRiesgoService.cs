@@ -5,7 +5,7 @@ namespace Seguros.Services.Contract
 {
     public interface ITipoRiesgoService
     {
-        List<TipoRiesgo> GetAll();
+        IEnumerable<TipoRiesgo> GetAll();
 
         TipoRiesgo Find(int id);
 

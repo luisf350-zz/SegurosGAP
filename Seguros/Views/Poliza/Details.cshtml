@@ -1,0 +1,66 @@
+﻿@model Seguros.Entities.Entities.Poliza
+
+@{
+    ViewBag.Title = "Dellate";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>Poliza</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoCubrimientoId)
+        </dt>
+
+        <dd>
+            @Html.DropDownList("TipoCubrimientoId", null, htmlAttributes: new { @class = "form-control", @disabled = "disabled" })
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoRiesgoId)
+        </dt>
+
+        <dd>
+            @Html.DropDownList("TipoRiesgoId", null, htmlAttributes: new { @class = "form-control", @disabled = "disabled" })
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MesesCobertura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MesesCobertura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Volver al Listado", "Index")
+</p>

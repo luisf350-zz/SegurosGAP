@@ -7,12 +7,19 @@ namespace Seguros.Controllers
 {
     public class TipoCubrimientoController : Controller
     {
+        #region Atributtes
+
         private readonly ITipoCubrimientoService _tipoCubrimientoService;
 
+        #endregion
+
+        #region Constructor
         public TipoCubrimientoController(ITipoCubrimientoService tipoCubrimientoService)
         {
             _tipoCubrimientoService = tipoCubrimientoService;
         }
+        
+        #endregion
 
         // GET: TipoCubrimiento
         public ActionResult Index()

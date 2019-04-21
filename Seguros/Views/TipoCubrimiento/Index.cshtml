@@ -1,4 +1,4 @@
-﻿@model List<Seguros.Entities.Entities.TipoCubrimiento>
+﻿@model IEnumerable<Seguros.Entities.Entities.TipoCubrimiento>
 
 @{
     ViewBag.Title = "Tipo Cubrimiento";
@@ -12,10 +12,10 @@
 <table class="table">
     <tr>
         <th>
-            Nombre
+            @Html.DisplayNameFor(model => model.Nombre)
         </th>
         <th>
-            Cobertura
+            @Html.DisplayNameFor(model => model.Cobertura)
         </th>
         <th></th>
     </tr>

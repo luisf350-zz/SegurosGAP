@@ -5,7 +5,7 @@ namespace Seguros.Services.Contract
 {
     public interface IPolizasClienteService
     {
-        List<PolizasCliente> GetAll();
+        IEnumerable<PolizasCliente> GetAll();
 
         PolizasCliente Find(int id);
 
