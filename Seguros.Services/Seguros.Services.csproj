@@ -41,7 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contract\IClienteService.cs" />
+    <Compile Include="Contract\IPolizasClienteService.cs" />
+    <Compile Include="Contract\ITipoCubrimientoService.cs" />
+    <Compile Include="Contract\IPolizaService.cs" />
+    <Compile Include="Contract\ITipoRiesgoService.cs" />
+    <Compile Include="Implementation\ClienteService.cs" />
+    <Compile Include="Implementation\PolizasClienteService.cs" />
+    <Compile Include="Implementation\TipoCubrimientoService .cs" />
+    <Compile Include="Implementation\PolizaService.cs" />
+    <Compile Include="Implementation\TipoRiesgoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Seguros.Entities\Seguros.Entities.csproj">
+      <Project>{32ED80AD-C3EA-4962-868C-6116597B32AB}</Project>
+      <Name>Seguros.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
