@@ -1,30 +1,44 @@
-﻿using Seguros.Entities.Entities;
+﻿using Seguros.Entities.Context;
+using Seguros.Entities.Entities;
+using Seguros.Repositories.Repositories;
 using Seguros.Services.Contract;
-using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seguros.Services.Implementation
 {
     public class TipoCubrimientoService : ITipoCubrimientoService
     {
+        private readonly TipoCubrimientoRepository _tipoCubrimientoRepository;
+
+        public TipoCubrimientoService()
+        {
+            _tipoCubrimientoRepository = new TipoCubrimientoRepository(new ApplicationDbContext());
+        }
+
         public List<TipoCubrimiento> GetAll()
         {
-            throw new NotImplementedException();
+            return _tipoCubrimientoRepository.GetAll().ToList();
         }
 
         public TipoCubrimiento Find(int id)
         {
-            throw new NotImplementedException();
+            return _tipoCubrimientoRepository.GetById(id);
         }
 
         public int Create(TipoCubrimiento entity)
         {
-            throw new NotImplementedException();
+            return _tipoCubrimientoRepository.Create(entity);
         }
 
-        public void Delete(TipoCubrimiento entity)
+        public bool Update(TipoCubrimiento entity)
         {
-            throw new NotImplementedException();
+            return _tipoCubrimientoRepository.Update(entity);
+        }
+
+        public int Delete(TipoCubrimiento entity)
+        {
+            return _tipoCubrimientoRepository.Delete(entity);
         }
     }
 }

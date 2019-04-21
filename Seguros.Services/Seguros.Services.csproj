@@ -58,6 +58,10 @@
       <Project>{32ED80AD-C3EA-4962-868C-6116597B32AB}</Project>
       <Name>Seguros.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Seguros.Repositories\Seguros.Repositories.csproj">
+      <Project>{d9a6b021-8119-40d3-9304-2222febb3404}</Project>
+      <Name>Seguros.Repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

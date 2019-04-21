@@ -11,6 +11,8 @@ namespace Seguros.Services.Contract
 
         int Create(TipoCubrimiento entity);
 
-        void Delete(TipoCubrimiento entity);
+        bool Update(TipoCubrimiento entity);
+        
+        int Delete(TipoCubrimiento entity);
     }
 }

@@ -1,30 +1,44 @@
-﻿using Seguros.Entities.Entities;
+﻿using Seguros.Entities.Context;
+using Seguros.Entities.Entities;
+using Seguros.Repositories.Repositories;
 using Seguros.Services.Contract;
-using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Seguros.Services.Implementation
 {
     public class ClienteService : IClienteService
     {
+        private readonly ClienteRepository _clienteRepository;
+
+        public ClienteService()
+        {
+            _clienteRepository = new ClienteRepository(new ApplicationDbContext());
+        }
+
         public List<Cliente> GetAll()
         {
-            throw new NotImplementedException();
+            return _clienteRepository.GetAll().ToList();
         }
 
         public Cliente Find(int id)
         {
-            throw new NotImplementedException();
+            return _clienteRepository.GetById(id);
         }
 
         public int Create(Cliente entity)
         {
-            throw new NotImplementedException();
+            return _clienteRepository.Create(entity);
         }
 
-        public void Delete(Cliente entity)
+        public bool Update(Cliente entity)
         {
-            throw new NotImplementedException();
+            return _clienteRepository.Update(entity);
+        }
+
+        public int Delete(Cliente entity)
+        {
+            return _clienteRepository.Delete(entity);
         }
     }
 }
