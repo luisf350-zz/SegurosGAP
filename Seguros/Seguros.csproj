@@ -164,6 +164,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PolizaController.cs" />
     <Compile Include="Controllers\TipoCubrimientoController.cs" />
+    <Compile Include="Controllers\TiposRiesgoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -215,6 +216,11 @@
     <Content Include="Views\Poliza\Create.cshtml" />
     <Content Include="Views\Poliza\Edit.cshtml" />
     <Content Include="Views\Poliza\Delete.cshtml" />
+    <Content Include="Views\TiposRiesgo\Index.cshtml" />
+    <Content Include="Views\TiposRiesgo\Details.cshtml" />
+    <Content Include="Views\TiposRiesgo\Create.cshtml" />
+    <Content Include="Views\TiposRiesgo\Edit.cshtml" />
+    <Content Include="Views\TiposRiesgo\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
