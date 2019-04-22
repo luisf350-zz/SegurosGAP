@@ -161,8 +161,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PolizaController.cs" />
+    <Compile Include="Controllers\PolizasClienteController.cs" />
     <Compile Include="Controllers\TipoCubrimientoController.cs" />
     <Compile Include="Controllers\TiposRiesgoController.cs" />
     <Compile Include="Global.asax.cs">
@@ -221,6 +223,16 @@
     <Content Include="Views\TiposRiesgo\Create.cshtml" />
     <Content Include="Views\TiposRiesgo\Edit.cshtml" />
     <Content Include="Views\TiposRiesgo\Delete.cshtml" />
+    <Content Include="Views\PolizasCliente\Index.cshtml" />
+    <Content Include="Views\PolizasCliente\Details.cshtml" />
+    <Content Include="Views\PolizasCliente\Create.cshtml" />
+    <Content Include="Views\PolizasCliente\Edit.cshtml" />
+    <Content Include="Views\PolizasCliente\Delete.cshtml" />
+    <Content Include="Views\Cliente\Index.cshtml" />
+    <Content Include="Views\Cliente\Details.cshtml" />
+    <Content Include="Views\Cliente\Create.cshtml" />
+    <Content Include="Views\Cliente\Edit.cshtml" />
+    <Content Include="Views\Cliente\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

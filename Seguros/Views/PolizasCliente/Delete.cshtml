@@ -1,0 +1,57 @@
+﻿@model Seguros.Entities.Entities.PolizasCliente
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3>Está seguro que desea eliminar esta poliza para el cliente?</h3>
+<div>
+    <h4>PolizasCliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClienteId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.NombreCompleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PolizaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Poliza.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InicioCubrimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InicioCubrimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Activa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EsActiva)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+            @Html.ActionLink("Volver al Listado", "Index")
+        </div>
+    }
+</div>

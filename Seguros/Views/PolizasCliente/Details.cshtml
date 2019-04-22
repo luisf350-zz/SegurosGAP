@@ -1,0 +1,50 @@
+﻿@model Seguros.Entities.Entities.PolizasCliente
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>Polizas Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClienteId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.NombreCompleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PolizaId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Poliza.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InicioCubrimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InicioCubrimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Activa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Activa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Volver al Listado", "Index")
+</p>
