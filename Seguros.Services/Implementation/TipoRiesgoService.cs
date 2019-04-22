@@ -2,7 +2,10 @@
 using Seguros.Entities.Entities;
 using Seguros.Repositories.Repositories;
 using Seguros.Services.Contract;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace Seguros.Services.Implementation
 {
@@ -15,9 +18,9 @@ namespace Seguros.Services.Implementation
             _tipoRiesgoRepository = new TipoRiesgoRepository(new ApplicationDbContext());
         }
 
-        public IEnumerable<TipoRiesgo> GetAll()
+        public IEnumerable<TipoRiesgo> GetAll(Expression<Func<TipoRiesgo, bool>> filter = null, Func<IQueryable<TipoRiesgo>, IOrderedQueryable<TipoRiesgo>> orderBy = null, params Expression<Func<TipoRiesgo, object>>[] includes)
         {
-            return _tipoRiesgoRepository.GetAll();
+            return _tipoRiesgoRepository.GetAll(filter, orderBy, includes);
         }
 
         public TipoRiesgo Find(int id)
@@ -39,5 +42,7 @@ namespace Seguros.Services.Implementation
         {
             return _tipoRiesgoRepository.Delete(entity);
         }
+
+        
     }
 }

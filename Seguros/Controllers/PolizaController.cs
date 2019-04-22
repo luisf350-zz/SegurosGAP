@@ -42,7 +42,7 @@ namespace Seguros.Controllers
         // GET: Poliza
         public ActionResult Index()
         {
-            return View(_polizaService.GetAll());
+            return View(_polizaService.GetAll(null, null, x => x.Cubrimiento, x => x.Riesgo));
         }
 
         // GET: Poliza/Details/5
@@ -59,7 +59,7 @@ namespace Seguros.Controllers
             }
 
             LoadCombos(poliza.TipoCubrimientoId, poliza.TipoRiesgoId);
-            
+
             return View(poliza);
         }
 
@@ -174,6 +174,6 @@ namespace Seguros.Controllers
             return RedirectToAction("Index");
         }
 
-        
+
     }
 }

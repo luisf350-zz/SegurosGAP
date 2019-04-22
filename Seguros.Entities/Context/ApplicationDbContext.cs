@@ -5,7 +5,7 @@ namespace Seguros.Entities.Context
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext() : base(@"Data Source=LENOVO\SQLSERVER2017;Initial Catalog=SegurosDB;Integrated Security=True")
+        public ApplicationDbContext() : base(@"Data Source=EN2010065\MSSQLSERVER2017;Initial Catalog=SegurosDB;Integrated Security=True")
         {
             Database.SetInitializer(new CreateDatabaseIfNotExists<ApplicationDbContext>());
         }

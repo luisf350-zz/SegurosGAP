@@ -43,7 +43,7 @@ namespace Seguros.Controllers
         // GET: PolizasCliente
         public ActionResult Index()
         {
-            return View(_polizasClienteService.GetAll());
+            return View(_polizasClienteService.GetAll(null, null, x => x.Cliente, x => x.Poliza));
         }
 
         // GET: PolizasCliente/Details/5
