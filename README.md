@@ -1,0 +1,2 @@
+# SegurosGAP
+Repository Pattern
